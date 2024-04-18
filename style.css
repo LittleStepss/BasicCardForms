@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 375px) {
+    /* Styles spécifiques pour les mobiles */
+}
+
+@media screen and (min-width: 376px) and (max-width: 1440px) {
+    /* Styles spécifiques pour les tablettes */
+}
+
+@media screen and (min-width: 1441px) {
+    /* Styles spécifiques pour les desktops */
+}
+
+:root {
+    --active-input-border-gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --input-errors: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-violet: hsl(270, 3%, 87%);
+    --dark-violet: hsl(279, 6%, 55%);
+    --very-violet: hsl(278, 68%, 11%);
+}
+
+
+/* Typo */
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--light-violet);
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-violet);
+}
+
+form input[type="text"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-violet);
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: var(--dark-violet);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--very-violet);
+}
+
+.exp-cvc-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+}
+
+.exp-date-container,
+.cvc-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.exp-date-container input,
+.cvc-container input {
+    width: calc(50% - 5px);
+    /* Calcul pour laisser un petit espace entre les champs */
+    margin-bottom: 10px;
+}
+
+.cvc-container {
+    margin-left: 10px;
+    /* Ajout de marge entre les champs MM/YY et CVC */
+}

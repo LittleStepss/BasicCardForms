@@ -5,34 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="style.css" rel="stylesheet">
+    <title></title>
 </head>
 
 <body>
 
-    0000 0000 0000 0000
-    Jane Appleseed
-    00/00
+    <div class="container">
+        <div class="image-container">
+            <img src="images/bg-main-desktop.png" alt="Image">
+        </div>
+        <div class="form-container">
+            <form action="">
+                <label for="cardholder-name">CARDHOLDER NAME</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Jane Appleseed">
+                <label for="card-number">CARD NUMBER</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9123 0000">
+                <div class="exp-cvc-container">
+                    <div class="exp-date-container">
+                        <label for="exp-month">EXP. MONTH (MM)(YY)</label>
+                        <input type="text" id="exp-month" name="exp-month" placeholder="MM" maxlength="2">
+                        <label for="exp-year">EXP. YEAR (YY)</label>
+                        <input type="text" id="exp-year" name="exp-year" placeholder="YY" maxlength="2">
+                    </div>
+                    <div class="cvc-container">
+                        <label for="cvc">CVC</label>
+                        <input type="text" id="cvc" name="cvc" placeholder="123">
+                    </div>
+                </div>
+                <input type="submit" value="Confirm">
+            </form>
+        </div>
 
-    000
 
-    Cardholder Name
-    e.g. Jane Appleseed
-
-    Card Number
-    e.g. 1234 5678 9123 0000
-
-    Exp. Date (MM/YY)
-    MM
-    YY
-
-    CVC
-    e.g. 123
-
-    Confirm
-
-    Thank you!
-    We've added your card details
-    Continue
+    </div>
 
 </body>
 
