@@ -1,45 +1,44 @@
+`
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link href="style.css" rel="stylesheet">
-    <title></title>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="container">
         <div class="image-container">
-            <img src="images/bg-main-desktop.png" alt="Image">
+            <img src="/images/bg-main-desktop.png" alt="Image" class="bottom-image">
+            <img src="/images/bg-card-front.png" alt="Image" class="top-image1">
+            <img src="/images/bg-card-back.png" alt="Image" class="top-image2">
+            <div class="scriptAutoFill">
+                <label for="input2"></label>
+                <input type="text" id="input2" readonly><br><br>
+            </div>
         </div>
         <div class="form-container">
             <form action="">
                 <label for="cardholder-name">CARDHOLDER NAME</label>
-                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Jane Appleseed">
-                <label for="card-number">CARD NUMBER</label>
-                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9123 0000">
-                <div class="exp-cvc-container">
-                    <div class="exp-date-container">
-                        <label for="exp-month">EXP. MONTH (MM)(YY)</label>
-                        <input type="text" id="exp-month" name="exp-month" placeholder="MM" maxlength="2">
-                        <label for="exp-year">EXP. YEAR (YY)</label>
-                        <input type="text" id="exp-year" name="exp-year" placeholder="YY" maxlength="2">
-                    </div>
-                    <div class="cvc-container">
-                        <label for="cvc">CVC</label>
-                        <input type="text" id="cvc" name="cvc" placeholder="123">
-                    </div>
-                </div>
+                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Jane Appleseed"
+                    class="full-width">
+                <label for="input1222">CARD NUMBER</label>
+                <input type="text" id="input1"><br><br>
+                <label for="exp-date">EXP. DATE (MM/YY)</label>
+                <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" class="small-width">
                 <input type="submit" value="Confirm">
             </form>
         </div>
-
-
-    </div>
-
+        <div id="thankYouContainer"> <!-- Ajout du conteneur pour le message de remerciement -->
+            <p id="thankYouMessage">Thank You!</p>
+        </div>
+        <script src="script.js"></script>
+        <script src="scriptAutoFill.js"></script>
 </body>
 
 </html>
